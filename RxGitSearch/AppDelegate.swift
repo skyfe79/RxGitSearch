@@ -7,15 +7,31 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var disposeBag = DisposeBag()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Github<SearchRepositoryResponse>.rx_search(SearchWhere.REPOSITORY, what: "swift")
+        .subscribeNext { (response) -> Void in
+            print(response.totalCount)
+            if response.totalCount > 0 {
+                for item in response.items {
+                    print(item.id)
+                    print("\n")
+                }
+            }
+        }
+        .addDisposableTo(disposeBag)
+
+        
         return true
     }
 
