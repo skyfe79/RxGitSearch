@@ -5,6 +5,9 @@
 //  Created by burt.k(Sungcheol Kim) on 2016. 2. 5..
 //  Copyright © 2016년 burt. All rights reserved.
 //
+//  skyfe79@gmail.com
+//  http://blog.burt.pe.kr
+//  http://github.com/skyfe79
 
 import UIKit
 import RxSwift
@@ -19,12 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        Github<SearchRepositoryResponse>.rx_search(SearchWhere.REPOSITORY, what: "swift")
+        //Github<SearchCodeResponse>.rx_search(SearchWhere.CODE, what: "window", repository: "jquery/jquery")
+        //Github<SearchIssueResponse>.rx_search(SearchWhere.ISSUE, what: "windows", repository: "jquery/jquery")
+        Github<SearchUserResponse>.rx_search(SearchWhere.USER, what: "toms", repository: "jquery/jquery")
         .subscribeNext { (response) -> Void in
             print(response.totalCount)
             if response.totalCount > 0 {
                 for item in response.items {
-                    print(item.id)
+                    print(item.login)
                     print("\n")
                 }
             }

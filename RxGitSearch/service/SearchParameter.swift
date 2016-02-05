@@ -18,6 +18,8 @@
 //  /search/users
 // 
 //  The q and language is common paramter to search upper subjects.
+//  If you want to search code, you must include at least on user, organization or repository
+//  +repo:blahblah 
 
 enum SortType : String {
     case STARS = "stars"
@@ -51,6 +53,8 @@ final class SearchParameter {
         private var parameter : SearchParameter!
         var query : String!
         var language : String? = nil
+        var repository : String? = nil
+        
         init() {
             parameter = SearchParameter()
             query = ""
@@ -61,8 +65,13 @@ final class SearchParameter {
             return self
         }
         
-        func language(lang: String) -> Builder {
+        func language(lang: String?) -> Builder {
             language = lang
+            return self
+        }
+        
+        func repository(repo: String?) -> Builder {
+            repository = repo
             return self
         }
         
@@ -81,6 +90,11 @@ final class SearchParameter {
             if let lang = language {
                 query = query + "+language:\(lang)"
             }
+            
+            if let repo = repository {
+                query = query + "+repo:\(repo)"
+            }
+            
             parameter.add("q", value: query)
             
             

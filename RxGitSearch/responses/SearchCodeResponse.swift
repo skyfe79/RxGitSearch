@@ -1,5 +1,5 @@
 //
-//  SearchRepositoryResponse.swift
+//  SearchCodeResponse.swift
 //  RxGitSearch
 //
 //  Created by burt on 2016. 2. 5..
@@ -11,12 +11,12 @@
 
 import ObjectMapper
 
-class SearchRepositoryResponse: SearchResponseBase {
+class SearchCodeResponse: SearchResponseBase {
     
-    var items : [Repository]
+    var items : [Code]
     
     required init?(_ map: Map) {
-        items = [Repository]()
+        items = [Code]()
         super.init(map)
     }
     

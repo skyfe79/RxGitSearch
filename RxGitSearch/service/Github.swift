@@ -5,6 +5,9 @@
 //  Created by burt on 2016. 2. 5..
 //  Copyright © 2016년 burt. All rights reserved.
 //
+//  skyfe79@gmail.com
+//  http://blog.burt.pe.kr
+//  http://github.com/skyfe79
 
 import Alamofire
 import ObjectMapper
@@ -22,10 +25,12 @@ enum SearchWhere {
 
 final class Github<T: Mappable> {
     
-    static func rx_search(searchWhere: SearchWhere, what: String) -> Observable<T> {
+    static func rx_search(searchWhere: SearchWhere, what: String, repository: String? = nil, language: String? = nil) -> Observable<T> {
         
         let parameter = SearchParameter.Builder()
             .query(what)
+            .language(language)
+            .repository(repository)
             .sort(.STARS)
             .order(.DESC)
             .build()
