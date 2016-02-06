@@ -7,6 +7,11 @@
 //
 //  This costomized version of SwiftRoute. @see https://github.com/skyline75489/SwiftRouter
 //  I have to write this Route module because we need to use ViewModel and Back Route Block to remove dependency!
+//
+//  skyfe79@gmail.com
+//  http://blog.burt.pe.kr
+//  http://github.com/skyfe79
+
 
 import Foundation
 import UIKit

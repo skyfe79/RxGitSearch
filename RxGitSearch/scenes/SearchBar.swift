@@ -1,15 +1,14 @@
 //
-//  KMapSearchBar.swift
-//  KakaoMaps
+//  SearchBar
+//  RxGitSearch
 //
-//  Created by burt.k(Sungcheol Kim) on 2016. 1. 25..
-//  Copyright © 2016년 Daum Comunication Corp. All rights reserved.
+//  Created by burt on 2016. 2. 6..
+//  Copyright © 2016년 burt. All rights reserved.
 //
+//  skyfe79@gmail.com
+//  http://blog.burt.pe.kr
+//  http://github.com/skyfe79
 
-//  커스텀내용 
-//  - Cancel버튼 제거
-//  - 돋보기 제거
-//  - 임의 배경 화면 적용
 import UIKit
 import SwiftString
 import RxSwift
