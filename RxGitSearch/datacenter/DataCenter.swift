@@ -17,6 +17,7 @@ class DataCenter {
     let disposeBag = DisposeBag()
     var operationQueue : NSOperationQueue!
     var backgroundWorkScheduler : OperationQueueScheduler!
+    var officeBox : [String:Variable<Any>] = [String:Variable<Any>]() // PostOfficeBox
     
     // REST API Service
     // DBService
@@ -33,11 +34,20 @@ class DataCenter {
 }
 
 extension DataCenter {
+    
     func setupBackgroundWorkScheduler() {
         operationQueue = NSOperationQueue()
         operationQueue.maxConcurrentOperationCount = 3
         operationQueue.qualityOfService = NSQualityOfService.UserInitiated
         backgroundWorkScheduler = OperationQueueScheduler(operationQueue: operationQueue)
+    }
+    
+    func post(name: String, value: Any) {
+        officeBox[name] = Variable(value: value)
+    }
+    
+    func receive(name: String) -> Variable<Any>? {
+        return officeBox[name]
     }
 }
 

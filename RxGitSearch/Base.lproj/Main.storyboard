@@ -65,10 +65,66 @@
             </objects>
             <point key="canvasLocation" x="719" y="189"/>
         </scene>
-        <!--View Controller-->
+        <!--About View Controller-->
+        <scene sceneID="Lbf-yZ-iV4">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fsr-gA-eYh" customClass="AboutViewController" customModule="RxGitSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lqn-nw-jo2"/>
+                        <viewControllerLayoutGuide type="bottom" id="sLD-pY-cBL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q6g-Av-b60">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iml-Qk-BsE">
+                                <rect key="frame" x="0.0" y="75" width="600" height="525"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjn-Iu-MNd">
+                                <rect key="frame" x="263" y="32" width="75" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zq0-le-18v">
+                                <rect key="frame" x="532" y="24" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="dlZ-yF-x6r"/>
+                                    <constraint firstAttribute="width" constant="48" id="q7K-ns-FoZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zq0-le-18v" firstAttribute="top" secondItem="Lqn-nw-jo2" secondAttribute="bottom" constant="4" id="AG9-IC-OFD"/>
+                            <constraint firstItem="sLD-pY-cBL" firstAttribute="top" secondItem="Iml-Qk-BsE" secondAttribute="bottom" id="NbJ-hW-eBl"/>
+                            <constraint firstItem="cjn-Iu-MNd" firstAttribute="top" secondItem="Lqn-nw-jo2" secondAttribute="bottom" constant="12" id="WcT-U6-SAV"/>
+                            <constraint firstAttribute="trailing" secondItem="Zq0-le-18v" secondAttribute="trailing" constant="20" id="Wk5-EE-U8X"/>
+                            <constraint firstItem="Iml-Qk-BsE" firstAttribute="top" secondItem="cjn-Iu-MNd" secondAttribute="bottom" constant="17" id="qWG-md-OaP"/>
+                            <constraint firstItem="Iml-Qk-BsE" firstAttribute="leading" secondItem="Q6g-Av-b60" secondAttribute="leading" id="tW7-CW-AhM"/>
+                            <constraint firstAttribute="trailing" secondItem="Iml-Qk-BsE" secondAttribute="trailing" id="vIH-9f-ZrL"/>
+                            <constraint firstItem="cjn-Iu-MNd" firstAttribute="centerX" secondItem="Q6g-Av-b60" secondAttribute="centerX" id="zBC-YR-5X8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="Zq0-le-18v" id="LIT-Pc-MeC"/>
+                        <outlet property="webView" destination="Iml-Qk-BsE" id="cgK-nm-a3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ih-9Q-s67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301" y="-504"/>
+        </scene>
+        <!--Detail View Controller-->
         <scene sceneID="GMK-zl-Qf0">
             <objects>
-                <viewController id="S9A-aT-X1H" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S9A-aT-X1H" customClass="DetailViewController" customModule="RxGitSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q2G-I0-gNq"/>
                         <viewControllerLayoutGuide type="bottom" id="DKG-xP-ZEd"/>
@@ -76,12 +132,56 @@
                     <view key="view" contentMode="scaleToFill" id="5br-pH-Rrb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEJ-KS-ZMT">
+                                <rect key="frame" x="20" y="28" width="40" height="30"/>
+                                <state key="normal" title="BACK"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qtC-CC-8ij">
+                                <rect key="frame" x="221" y="28" width="159" height="29"/>
+                                <segments>
+                                    <segment title="Repository"/>
+                                    <segment title="Owner"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7CJ-tw-hLZ">
+                                <rect key="frame" x="20" y="76" width="560" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj3-OA-8gY">
+                                <rect key="frame" x="528" y="28" width="52" height="30"/>
+                                <state key="normal" title="ABOUT"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.93086880940000005" blue="0.33559345089999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7CJ-tw-hLZ" firstAttribute="top" secondItem="qtC-CC-8ij" secondAttribute="bottom" constant="20" id="PMk-Ax-xvf"/>
+                            <constraint firstItem="Fj3-OA-8gY" firstAttribute="top" secondItem="q2G-I0-gNq" secondAttribute="bottom" constant="8" id="RGg-rQ-6hH"/>
+                            <constraint firstItem="DKG-xP-ZEd" firstAttribute="top" secondItem="7CJ-tw-hLZ" secondAttribute="bottom" constant="20" id="VIK-Xs-r31"/>
+                            <constraint firstAttribute="trailing" secondItem="Fj3-OA-8gY" secondAttribute="trailing" constant="20" id="VrC-h9-9Hg"/>
+                            <constraint firstItem="qtC-CC-8ij" firstAttribute="top" secondItem="q2G-I0-gNq" secondAttribute="bottom" constant="8" id="WyG-94-EJB"/>
+                            <constraint firstAttribute="trailing" secondItem="7CJ-tw-hLZ" secondAttribute="trailing" constant="20" id="ZFi-Fx-JpY"/>
+                            <constraint firstItem="qtC-CC-8ij" firstAttribute="centerX" secondItem="5br-pH-Rrb" secondAttribute="centerX" id="ds6-Ry-oac"/>
+                            <constraint firstItem="7CJ-tw-hLZ" firstAttribute="leading" secondItem="5br-pH-Rrb" secondAttribute="leading" constant="20" id="kNL-kM-teD"/>
+                            <constraint firstItem="CEJ-KS-ZMT" firstAttribute="leading" secondItem="5br-pH-Rrb" secondAttribute="leading" constant="20" id="t6p-Uz-Am6"/>
+                            <constraint firstItem="CEJ-KS-ZMT" firstAttribute="top" secondItem="q2G-I0-gNq" secondAttribute="bottom" constant="8" id="xox-1d-wOz"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="aboutButton" destination="Fj3-OA-8gY" id="Vrs-I0-W40"/>
+                        <outlet property="backButton" destination="CEJ-KS-ZMT" id="a87-dM-mbb"/>
+                        <outlet property="segmentedControl" destination="qtC-CC-8ij" id="2dM-yU-vTU"/>
+                        <outlet property="textView" destination="7CJ-tw-hLZ" id="aD6-hb-BBL"/>
+                        <outlet property="view" destination="5br-pH-Rrb" id="VEb-e5-NG9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfM-kt-Ln6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369" y="189"/>
+            <point key="canvasLocation" x="1343" y="189"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YxE-eJ-ECj">

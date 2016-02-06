@@ -10,8 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class BaseViewController : UIViewController {
+class BaseViewController : UIViewController, RoutableViewController {
     
     var disposeBag = DisposeBag()
     
+    func setViewModel(viewModel: ViewModelType) {
+    }
 }

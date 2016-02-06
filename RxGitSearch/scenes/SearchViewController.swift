@@ -12,6 +12,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+
 class SearchViewController: BaseViewController {
     
     // widgets
@@ -33,9 +34,20 @@ class SearchViewController: BaseViewController {
         setupTableView()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         searchBar.resignFirstResponder()
+    }
+    
+    override func setViewModel(viewModel: ViewModelType) {
+        if let vm = viewModel as? SearchViewModel {
+            self.viewModel = vm
+            self.viewModel.activated()
+        }
     }
 }
 
@@ -44,6 +56,7 @@ extension SearchViewController {
     
     func setupViewModel() {
         viewModel = SearchViewModel()
+        viewModel.activated()
         
         viewModel
             .rx_onError
@@ -103,6 +116,21 @@ extension SearchViewController {
             .subscribeOn(MainScheduler.instance)
             .subscribeNext { [unowned self] (indexPath) -> Void in
                 if let repo = self.viewModel.repositoryAtIndex(indexPath.row) {
+                    
+                    let id = repo.id
+                    // We can not send the repo data via url, so that we post the repo data to the DataCenter
+                    DataCenter.instance.post(String(id), value: repo)
+                    Route.push(self, url: "http://repository/detail/\(id)") { (vc, result) in
+                        
+                        vc.navigationController?.popViewControllerAnimated(true)
+                        
+                        let alert = UIAlertController(title: "WOW", message: String(result!), preferredStyle: UIAlertControllerStyle.ActionSheet)
+                        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
+                            alert.dismissViewControllerAnimated(true, completion: nil)
+                        })
+                        alert.addAction(action)
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
                     
                 }
                 self.tableView.deselectRowAtIndexPath(indexPath, animated: true)

@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SearchViewModel {
+class SearchViewModel : NSObject, ViewModelType {
     
     let disposeBag = DisposeBag()
     
@@ -23,7 +23,7 @@ class SearchViewModel {
     var adapter : SearchAdapter = SearchAdapter()
     var rx_updatedAdapter : PublishSubject<String> = PublishSubject()
     
-    init() {
+    func activated() {
         setupFetchSearchSuggestRepository()
         setupFetchSearchRepository()
     }

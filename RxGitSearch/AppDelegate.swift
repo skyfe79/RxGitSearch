@@ -20,23 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var disposeBag = DisposeBag()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-                
-//        // Override point for customization after application launch.
-//        
-//        //Github<SearchCodeResponse>.rx_search(SearchWhere.CODE, what: "window", repository: "jquery/jquery")
-//        //Github<SearchIssueResponse>.rx_search(SearchWhere.ISSUE, what: "windows", repository: "jquery/jquery")
-//        Github<SearchUserResponse>.rx_search(SearchWhere.USER, what: "toms", repository: "jquery/jquery")
-//        .subscribeNext { (response) -> Void in
-//            print(response.totalCount)
-//            if response.totalCount > 0 {
-//                for item in response.items {
-//                    print(item.login)
-//                    print("\n")
-//                }
-//            }
-//        }
-//        .addDisposableTo(disposeBag)
-
+        
+        Route.setStoryBoardName("Main")
+        Route.map("app://repository/detail/:id", classVC: DetailViewController.self)
+        Route.map("app://rxgitsearch/about", classVC: AboutViewController.self)
         
         return true
     }
