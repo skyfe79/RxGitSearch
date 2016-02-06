@@ -38,10 +38,10 @@
 		4EEB6F4A1C65DE260064043D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F491C65DE260064043D /* DetailViewController.swift */; };
 		4EEB6F4C1C65DE500064043D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F4B1C65DE500064043D /* DetailViewModel.swift */; };
 		4EEB6F4F1C65DEC90064043D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F4E1C65DEC90064043D /* Route.swift */; };
-		4EEB6F511C65FD110064043D /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F501C65FD110064043D /* ViewModelType.swift */; };
 		4EEB6F531C65FD590064043D /* RoutableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F521C65FD590064043D /* RoutableViewController.swift */; };
 		4EEB6F561C661D320064043D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F551C661D320064043D /* AboutViewController.swift */; };
 		4EEB6F581C661D3D0064043D /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F571C661D3D0064043D /* AboutViewModel.swift */; };
+		4EEB6F5A1C6625450064043D /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F591C6625450064043D /* ViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,10 +90,10 @@
 		4EEB6F491C65DE260064043D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4EEB6F4B1C65DE500064043D /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4EEB6F4E1C65DEC90064043D /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		4EEB6F501C65FD110064043D /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModelType.swift; path = ../ViewModelType.swift; sourceTree = "<group>"; };
 		4EEB6F521C65FD590064043D /* RoutableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutableViewController.swift; sourceTree = "<group>"; };
 		4EEB6F551C661D320064043D /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		4EEB6F571C661D3D0064043D /* AboutViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
+		4EEB6F591C6625450064043D /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		8EDEA02F056C59094AB84A2B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9BD7C04DBB517A6C3CEF5400 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,7 +136,7 @@
 		4E56E93B1C64E598002BDDFF /* scenes */ = {
 			isa = PBXGroup;
 			children = (
-				4EEB6F501C65FD110064043D /* ViewModelType.swift */,
+				4EEB6F591C6625450064043D /* ViewModelType.swift */,
 				4EEB6F521C65FD590064043D /* RoutableViewController.swift */,
 				4EEB6F541C661D1D0064043D /* AboutScene */,
 				4EEB6F481C65DE030064043D /* DetailScene */,
@@ -451,6 +451,7 @@
 				4E56E95E1C64FA2C002BDDFF /* DataCenter.swift in Sources */,
 				4EEB6F581C661D3D0064043D /* AboutViewModel.swift in Sources */,
 				4E56E9391C64CB7F002BDDFF /* SearchIssueResponse.swift in Sources */,
+				4EEB6F5A1C6625450064043D /* ViewModelType.swift in Sources */,
 				4E8990401C64B72A0031E8A1 /* SearchResponseBase.swift in Sources */,
 				4E56E92D1C64C428002BDDFF /* SearchCodeResponse.swift in Sources */,
 				4EEB6F4C1C65DE500064043D /* DetailViewModel.swift in Sources */,
@@ -461,7 +462,6 @@
 				4E56E9591C64EE4F002BDDFF /* SearchBar.swift in Sources */,
 				4E56E92B1C64BF82002BDDFF /* Code.swift in Sources */,
 				4E56E93F1C64E5AE002BDDFF /* SearchViewModel.swift in Sources */,
-				4EEB6F511C65FD110064043D /* ViewModelType.swift in Sources */,
 				4E898FFC1C64AB110031E8A1 /* GithubService.swift in Sources */,
 				4E898FF91C64AB050031E8A1 /* Search.swift in Sources */,
 				4E56E9371C64CB6C002BDDFF /* SearchUserResponse.swift in Sources */,

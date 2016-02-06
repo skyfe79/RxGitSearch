@@ -47,7 +47,7 @@ final class GithubService<T: SearchResponseBase> {
             
             let request = self.search(searchWhere, parameter: parameter)
                 .responseString(completionHandler: { (response : Response<String, NSError>) -> Void in
-                    if let result = response.result.value {
+                    if let _ = response.result.value {
                         //print(result)
                     } else {
                         subscriber.onError(NSError(domain: "There is no results", code: 1000, userInfo: nil))
