@@ -23,7 +23,9 @@ enum SearchWhere {
 }
 
 
-final class Github<T: Mappable> {
+final class GithubService<T: SearchResponseBase> {
+    
+    private init() {}
     
     static func rx_search(searchWhere: SearchWhere, what: String, repository: String? = nil, language: String? = nil) -> Observable<T> {
         
@@ -44,14 +46,22 @@ final class Github<T: Mappable> {
         return Observable.create { subscriber -> Disposable in
             
             let request = self.search(searchWhere, parameter: parameter)
-                .responseString(completionHandler: { (response) -> Void in
-                    print(response.result.value ?? "NOT")
+                .responseString(completionHandler: { (response : Response<String, NSError>) -> Void in
+                    if let result = response.result.value {
+                        //print(result)
+                    } else {
+                        subscriber.onError(NSError(domain: "There is no results", code: 1000, userInfo: nil))
+                    }
                 })
                 .responseObject({ (response : Response<T, NSError>) -> Void in
                     switch response.result {
                     case .Success(let value):
-                        subscriber.onNext(value)
-                        subscriber.onCompleted()
+                        if value.isApiRateLimited() {
+                            subscriber.onError(NSError(domain: value.apiRateLimitMessage!, code: -1, userInfo: nil))
+                        } else {
+                            subscriber.onNext(value)
+                            subscriber.onCompleted()
+                        }
                     case .Failure(let error):
                         subscriber.onError(error)
                     }

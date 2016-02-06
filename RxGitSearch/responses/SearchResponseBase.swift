@@ -14,6 +14,8 @@ import ObjectMapper
 class SearchResponseBase : Mappable {
     var totalCount : Int
     var isIncompleteResults : Bool
+
+    var apiRateLimitMessage : String? = nil
     
     required init?(_ map: Map) {
         totalCount = 0
@@ -23,5 +25,10 @@ class SearchResponseBase : Mappable {
     func mapping(map: Map) {
         totalCount <- map["total_count"]
         isIncompleteResults <- map["incomplete_results"]
+        apiRateLimitMessage <- map["message"]
+    }
+    
+    func isApiRateLimited() -> Bool {
+        return apiRateLimitMessage != nil
     }
 }

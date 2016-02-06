@@ -17,6 +17,7 @@ PODS:
   - RxCocoa (2.1.0):
     - RxSwift (~> 2.0)
   - RxSwift (2.1.0)
+  - SwiftString (0.2)
 
 DEPENDENCIES:
   - Action
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - RxBlocking
   - RxCocoa
   - RxSwift
+  - SwiftString
 
 SPEC CHECKSUMS:
   Action: 14614ba954555cfde5035cec93e8d030f962876c
@@ -37,5 +39,6 @@ SPEC CHECKSUMS:
   RxBlocking: fa297def258d85c5beae9ed507f94645260b3747
   RxCocoa: 79b5feb8378545336e756a0a33fcf5e95050b71c
   RxSwift: 110fb07f81c17c2c3b3254d168363057b1880d18
+  SwiftString: d05af457c41faa7c136a78c8435926c94f3583d2
 
 COCOAPODS: 0.39.0

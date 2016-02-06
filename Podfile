@@ -14,3 +14,6 @@ pod 'Alamofire'
 # JSON MAPPER
 pod 'ObjectMapper'
 pod 'AlamofireObjectMapper'
+
+# Foundation Extension
+pod "SwiftString"
