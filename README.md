@@ -1,10 +1,10 @@
 # RxGitSearch
 
-RxGitSearch is demo app for iOS. It use some Rx techniques to achieve flexible, auto ui update, no depencies and others. If you're wandering how to use Rx for real app, I hope RxGitSearch may help you! If you are Korean, You can see [my slideshare](http://www.slideshare.net/skyfe79/rx-for-ios-app-rxmvvmdatacenter) why removing dependency is important. 
+RxGitSearch is demo app for iOS. It use some Rx techniques to achieve flexible, auto ui update, no dependencies and others. If you're wandering how to use Rx for real app, I hope RxGitSearch may help you! If you are Korean, You can see [my slideshare](http://www.slideshare.net/skyfe79/rx-for-ios-app-rxmvvmdatacenter) why removing dependency is important. 
 
 [![RxGitSearch Demo Video](http://img.youtube.com/vi/NZPmzd2_UZA/0.jpg)](http://www.youtube.com/watch?v=NZPmzd2_UZA)
 
-## Using Techs
+## Techniques that I used
 * RxMVVM-DataCenter
  * 	If you are unfamiliar with RxMVVM-DataCenter architecture, I recommend you to read Ribot Tech Blog first. [Android Application Architecture](https://medium.com/ribot-labs/android-application-architecture-8b6e34acda65#.gbqrq9oib)
 * URL Route for ViewController navigation
@@ -77,7 +77,7 @@ backButton
 
 * You can remove every dependencies among ViewController using URL-Route!
 
-## Using Libraries
+## Libraries that RxGitSearch used
 
 * Rx
  * RxSwift
