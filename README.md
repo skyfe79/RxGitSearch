@@ -17,12 +17,12 @@ RxGitSearch is iOS demo app searching github repositories. It uses some Rx techn
 ### You can post & receive big data to & from DataCenter like belows.
 
 ```swift
-// post some data which is binded to id to DataCenter
+// post some data which is binded to 'id' to DataCenter
 DataCenter.instance.post(String(id), value: repo)
 ```
 
 ```swift
-// receive some data which is bined to id as Observable
+// receive some data which is binded to 'id' as observable
 DataCenter
     .instance
     .receive(id!)?
