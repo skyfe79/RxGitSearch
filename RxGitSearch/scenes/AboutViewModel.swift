@@ -15,6 +15,8 @@ import RxSwift
 import RxCocoa
 
 class AboutViewModel : NSObject, ViewModelType {
+    
+    var url: String? = nil
 
     func activated() {
     }

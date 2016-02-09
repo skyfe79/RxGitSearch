@@ -1,6 +1,6 @@
 # RxGitSearch
 
-RxGitSearch is demo app for iOS. It uses some Rx techniques to achieve flexible, auto ui update, no dependencies and others. If you're wandering how to use Rx for real app, I hope RxGitSearch may help you! If you are Korean, You can see [my slideshare](http://www.slideshare.net/skyfe79/rx-for-ios-app-rxmvvmdatacenter) why removing dependency is important. 
+RxGitSearch is iOS demo app searching github repositories. It uses some Rx techniques to achieve flexible, auto ui update, no dependencies and others. If you're wandering how to use Rx for real app, I think RxGitSearch may help you! The ViewControlls in RxGitSearch has no dependency among them because they use url route to navigate each other. If you are Korean, You can see [my slideshare](http://www.slideshare.net/skyfe79/rx-for-ios-app-rxmvvmdatacenter) why removing dependency among ViewControllers is important. 
 
 [![RxGitSearch Demo Video](http://img.youtube.com/vi/NZPmzd2_UZA/0.jpg)](http://www.youtube.com/watch?v=NZPmzd2_UZA)
 
@@ -8,7 +8,7 @@ RxGitSearch is demo app for iOS. It uses some Rx techniques to achieve flexible,
 * RxMVVM-DataCenter
  * 	If you are unfamiliar with RxMVVM-DataCenter architecture, I recommend you to read Ribot Tech Blog first. [Android Application Architecture](https://medium.com/ribot-labs/android-application-architecture-8b6e34acda65#.gbqrq9oib)
 * URL Route for ViewController navigation
- * URL Route can remove dependencies among ViewControllers than Apple's UISegue. Ofcourse UISegue can remove dependencies among viewcontrollers only just for transition. However, If you want to inject some data to the destination viewcontroller, you should cast destinationViewController to specific your viewcontroller on prepareSegue method. Here is the place that strong dependency is created.
+ * URL Route can remove dependencies among ViewControllers than Apple's UISegue does. Ofcourse UISegue can remove dependencies among viewcontrollers only just for transition. However, If you want to inject some data to the destination viewcontroller, you should cast destinationViewController to specific your viewcontroller on prepareSegue method. This is the place that strong dependency is created.
 
 ## RxMVVM-DATACENTER
 

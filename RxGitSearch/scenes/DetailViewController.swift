@@ -62,7 +62,7 @@ extension DetailViewController {
             .rx_tap
             .subscribeNext { [unowned self] in
                 if let nav = self.navigationController {
-                    Route.present(nav, url: "app://rxgitsearch/about") { [unowned self] (vc, result) in
+                    Route.present(nav, url: "app://rxgitsearch/about?url=https://github.com/skyfe79") { [unowned self] (vc, result) in
                         self.navigationController?.navigationBarHidden = true
                         vc.dismissViewControllerAnimated(true, completion: nil)
                     }

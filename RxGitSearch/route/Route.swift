@@ -294,9 +294,12 @@ extension Route {
     }
     
     private static func stripoffURLScheme(url: String) -> String {
-        let components = url.componentsSeparatedByString("://")
+        var components = url.componentsSeparatedByString("://")
         if components.count == 2 {
             return "/" + components[1] // return /user/detail/1?name=kim&age=30
+        } else if components.count > 2 {
+            components.removeFirst()
+            return "/" + components.joinWithSeparator("://") // return /about/url?=https://github.com/"
         }
         return url
     }

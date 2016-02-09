@@ -37,7 +37,10 @@ class AboutViewController: BaseViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.webView.loadRequest(NSURLRequest(URL: NSURL(string: "https://github.com/skyfe79")!))
+        
+        if let url = viewModel.url {
+            self.webView.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
+        }
     }
 }
 
