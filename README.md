@@ -36,7 +36,7 @@ DataCenter
     .addDisposableTo(disposeBag)
 ```
 
-### You can navigation among view controllers via URL
+### You can navigate view controllers via URL
 ```swift
 Route.push(self, url: "http://repository/detail/\(id)") { (vc, result) in
 	// Here is callback block which is called when you call Route.back() method.
