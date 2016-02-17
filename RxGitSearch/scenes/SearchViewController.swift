@@ -118,7 +118,7 @@ extension SearchViewController {
                 if let repo = self.viewModel.repositoryAtIndex(indexPath.row) {
                     
                     let id = repo.id
-                    // We can not send the repo data via url, so that we post the repo data to the DataCenter
+                    // We can not send the repo data via url, so we should post the repo data to the DataCenter
                     DataCenter.instance.post(String(id), value: repo)
                     Route.push(self, url: "http://repository/detail/\(id)") { (vc, result) in
                         
