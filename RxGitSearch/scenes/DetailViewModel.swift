@@ -14,7 +14,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class DetailViewModel : NSObject, ViewModelType {
+class DetailViewModel : BaseViewModel, ViewModelType {
 
     let disposeBag = DisposeBag()
     var id: String? = nil
@@ -29,8 +29,7 @@ class DetailViewModel : NSObject, ViewModelType {
 extension DetailViewModel {
     func setupRx() {
         
-        DataCenter.instance
-            .receive(id!)?
+        self.receive(id!)?
             .asObservable()
             .subscribeNext { [unowned self] (value: Any) -> Void in
                 if let repo = value as? Repository {

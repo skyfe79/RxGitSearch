@@ -42,6 +42,7 @@
 		4EEB6F561C661D320064043D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F551C661D320064043D /* AboutViewController.swift */; };
 		4EEB6F581C661D3D0064043D /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F571C661D3D0064043D /* AboutViewModel.swift */; };
 		4EEB6F5A1C6625450064043D /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB6F591C6625450064043D /* ViewModelType.swift */; };
+		4EEF98731C7B05AC0050C209 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF98721C7B05AC0050C209 /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		4EEB6F551C661D320064043D /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		4EEB6F571C661D3D0064043D /* AboutViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
 		4EEB6F591C6625450064043D /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		4EEF98721C7B05AC0050C209 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		8EDEA02F056C59094AB84A2B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9BD7C04DBB517A6C3CEF5400 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 				4EEB6F541C661D1D0064043D /* AboutScene */,
 				4EEB6F481C65DE030064043D /* DetailScene */,
 				4E56E9401C64E5B7002BDDFF /* SearchScene */,
+				4EEF98721C7B05AC0050C209 /* BaseViewModel.swift */,
 			);
 			path = scenes;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				4E56E92D1C64C428002BDDFF /* SearchCodeResponse.swift in Sources */,
 				4EEB6F4C1C65DE500064043D /* DetailViewModel.swift in Sources */,
 				4E56E95C1C64F092002BDDFF /* BaseViewController.swift in Sources */,
+				4EEF98731C7B05AC0050C209 /* BaseViewModel.swift in Sources */,
 				4E56E9351C64C914002BDDFF /* PullRequest.swift in Sources */,
 				4EEB6F561C661D320064043D /* AboutViewController.swift in Sources */,
 				4EEB6F531C65FD590064043D /* RoutableViewController.swift in Sources */,

@@ -14,7 +14,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SearchViewModel : NSObject, ViewModelType {
+class SearchViewModel : BaseViewModel, ViewModelType {
     
     let disposeBag = DisposeBag()
     

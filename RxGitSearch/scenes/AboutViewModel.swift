@@ -14,7 +14,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class AboutViewModel : NSObject, ViewModelType {
+class AboutViewModel : BaseViewModel, ViewModelType {
     
     var url: String? = nil
 

@@ -46,7 +46,11 @@ extension DataCenter {
     }
     
     func post(name: String, value: Any) {
-        officeBox[name] = Variable(value: value)
+        if officeBox.keys.contains(name) {
+            officeBox[name]!.value = value
+        } else {
+            officeBox[name] = Variable(value: value)
+        }
     }
     
     func receive(name: String) -> Variable<Any>? {
