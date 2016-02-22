@@ -5,7 +5,7 @@
 //  Created by burt on 2016. 2. 6..
 //  Copyright © 2016년 burt. All rights reserved.
 //
-//  This costomized version of SwiftRoute. @see https://github.com/skyline75489/SwiftRouter
+//  This customized version of SwiftRoute. @see https://github.com/skyline75489/SwiftRouter
 //  I have to write this Route module because we need to use ViewModel and Back Route Block to remove dependency!
 //
 //  skyfe79@gmail.com
