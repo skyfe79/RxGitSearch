@@ -2,7 +2,7 @@
 
 RxGitSearch is iOS demo app searching github repositories. It uses some Rx techniques to achieve flexible, auto ui update, no dependencies and others. If you're wandering how to use Rx for real app, I think RxGitSearch may help you! The ViewControlls in RxGitSearch has no dependency among them because they use url route to navigate each other. If you are Korean, You can see [my slideshare](http://www.slideshare.net/skyfe79/rx-for-ios-app-rxmvvmdatacenter) why removing dependency among ViewControllers is important. 
 
-[![RxGitSearch Demo Video](http://img.youtube.com/vi/NZPmzd2_UZA/0.jpg)](http://www.youtube.com/watch?v=NZPmzd2_UZA)
+[![RxGitSearch Demo Video](art/screenshot.png)](http://www.youtube.com/watch?v=NZPmzd2_UZA)
 
 ## Techniques that I used
 * RxMVVM-DataCenter
