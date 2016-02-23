@@ -8,7 +8,7 @@ RxGitSearch is iOS demo app searching github repositories. It uses some Rx techn
 * RxMVVM-DataCenter
  * 	If you are unfamiliar with RxMVVM-DataCenter architecture, I recommend you to read Ribot Tech Blog first. [Android Application Architecture](https://medium.com/ribot-labs/android-application-architecture-8b6e34acda65#.gbqrq9oib)
 * URL Route for ViewController navigation
- * URL Route can remove dependencies among ViewControllers than Apple's UISegue does. Ofcourse UISegue can remove dependencies among viewcontrollers only just for transition. However, If you want to inject some data to the destination viewcontroller, you should cast destinationViewController to specific your viewcontroller on prepareSegue method. This is the place that strong dependency is created.
+ * URL Route can remove dependencies among ViewControllers than Apple's UISegue does. Ofcourse UISegue can remove dependencies among viewcontrollers only just for transition. However, If you want to inject some data to the destination viewcontroller, you should cast destinationViewController to specific your viewcontroller on prepareSegue method. This is the place that strong dependency is generated.
 
 ## RxMVVM-DATACENTER
 
